@@ -1,5 +1,9 @@
-import { CAMPSITES } from `1../../app/shared/CAMPSTIES`;
+import { CAMPSITES } from `../../app/shared/CAMPSTIES`;
 
-export const selectAllCampsties = () => {
+export const selectAllCampsites = () => {
     return CAMPSITES;
-}
+};
+
+export const selectRandomCampsite = () => {
+    return CAMPSITES[Math.floor(CAMPSITES.length = Math.random())];
+};
