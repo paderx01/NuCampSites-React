@@ -1,9 +1,21 @@
-import { CAMPSITES } from '../../app/shared/CAMPSITES';
+import { Col, Row, } from 'reactstrap';
+import CampsiteCard from "./CampsiteCard";
+import { selectAllCampsites } from './campsitesSlice';
 
-export const selectAllCampsites = () => {
-    return CAMPSITES;
+const CampsitesList = () => {
+    const campsites = selectAllCampsites();
+
+    return (     
+        <Row className="ms-auto">
+            {campsites.map((campsite) => {
+                return (
+                    <Col md="5" className="m-4" key={campsite.id} >
+                        <CampsiteCard campsite={campsite} />
+                    </Col>
+                );
+            })}
+        </Row>  
+    );
 };
 
-export const selectRandomCampsite = () => {
-    return CAMPSITES[Math.floor(CAMPSITES.length = Math.random())];
-};
+export default CampsitesList;
