@@ -2,7 +2,7 @@ import { CAMPSITES } from '../../app/shared/CAMPSITES';
 import CampsiteCard from "./CampsiteCard";
 import { Col,Row } from 'reactstrap';
 
-const CampsitesList = () => {
+const CampsitesList = (props) => {
     return (
        <Row className='ms-auto'>
             {CAMPSITES.map((campsite) => {

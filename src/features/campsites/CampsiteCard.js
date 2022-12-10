@@ -1,19 +1,17 @@
-import { Card,CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
-const CampsiteCard = ({ campsite }) => {
-    const { image, name } = campsite;
+import { Card,CardImg,CardImgOverlay,CardTitle } from 'reactstrap';
+const CampsiteCard = (props) => {
     return (
         <Card>
 <           CardImg 
                 width='100%'
-                src={image}
-                alt={name}
+                src={props.campsite.image}
+                alt={props.campsite.name}
             /> 
             <CardImgOverlay >
-                <CardTitle>{name}</CardTitle>    
+                <CardTitle>{props.campsite.name}</CardTitle>    
             </CardImgOverlay>
         </Card>
     );
   }
-
 
   export default CampsiteCard;
