@@ -1,8 +1,7 @@
-import { Card, CardImg, CardText, CardBody, Col } from 'reactsrap';
-import { CardImgOverlay } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, Col } from 'reactstrap';
 
-const CampsiteDetail = ({ campsite }) => {
-    const { image, name, description } = campsites;
+const CampsiteDetail = ( {campsite} ) => {
+    const { image, name, description } = campsite;
 
     return (
         <Col md='12' className='m-4'>
@@ -13,8 +12,7 @@ const CampsiteDetail = ({ campsite }) => {
                 </CardBody>
             </Card>
         </Col>
-    )
-
+    );
 };
 
 export default CampsiteDetail;
