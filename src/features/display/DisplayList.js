@@ -6,7 +6,7 @@ import { selectFeaturedPromotion } from '../promotions/promotionsSlice';
 import { selectFeaturedPartner} from '../partners/partnersSlice'
 
 const DisplayList = () => {
-    ç items = [selectFeaturedCampsite(), selectFeaturedPromotion(),selectFeaturedPartner()];
+    const items = [selectFeaturedCampsite(), selectFeaturedPromotion(),selectFeaturedPartner()];
     return (
         <Row>
             {items.map((item, idx) => {
