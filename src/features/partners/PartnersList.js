@@ -4,7 +4,6 @@ import { Col } from 'reactstrap';
 
 const PartnersList = () => {
     const partners = selectAllPartners();
-    console.log('partners',partners)
     return (
        <Col className='mt-4'>
            { partners.map((partner)=>{
