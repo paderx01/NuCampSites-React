@@ -33,7 +33,7 @@ const CommentForm = ({campsiteId}) => {
                     Add Comment
                 </ModalHeader>
                 <ModalBody>
-                    <Formik initialValues={{rating:undefined, author:"", commentText:""}} onSubmit={{handleSubmit}} validate={validateCommentForm}>
+                    <Formik initialValues={{rating:undefined, author:"", commentText:""}} onSubmit={handleSubmit} validate={validateCommentForm}>
                         <Form>
                             <FormGroup>
                                 <Label htmlFor='rating'>
